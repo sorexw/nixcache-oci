@@ -1,6 +1,43 @@
 {
   "nodes": {
+    "ayugram-desktop": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "tg_owt": "tg_owt"
+      },
+      "locked": {
+        "lastModified": 1780805564,
+        "narHash": "sha256-XZtTlAiFExKvKz4wellhjDRKdy/YIEx647QOq0IM2LA=",
+        "ref": "refs/heads/release",
+        "rev": "b1aa6f51b7efc2e31c3216295354c1c4e11ae443",
+        "revCount": 425,
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/ndfined-crp/ayugram-desktop/"
+      },
+      "original": {
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/ndfined-crp/ayugram-desktop/"
+      }
+    },
     "nixpkgs": {
+      "locked": {
+        "lastModified": 1780243769,
+        "narHash": "sha256-x5UQuRsH3MqI0U9afaXSNqzTPSeZlRLvFAav2Ux1pNw=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "331800de5053fcebacf6813adb5db9c9dca22a0c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
       "locked": {
         "lastModified": 1781074563,
         "narHash": "sha256-md8WlXOlfnIeHeOScMTTHFyf2d6iaTwPl2apR5EQ3P4=",
@@ -16,29 +53,31 @@
         "type": "github"
       }
     },
-    "obk-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1778393359,
-        "narHash": "sha256-5WJfektnu29qrfqyzsmFkZ7SEG6TlM8OcRLVux5GnE0=",
-        "ref": "refs/heads/master",
-        "rev": "ad7eb41f37744a161e5378223c4b123629c90571",
-        "shallow": true,
-        "submodules": true,
-        "type": "git",
-        "url": "https://github.com/OpenBangla/OpenBangla-Keyboard.git"
-      },
-      "original": {
-        "shallow": true,
-        "submodules": true,
-        "type": "git",
-        "url": "https://github.com/OpenBangla/OpenBangla-Keyboard.git"
-      }
-    },
     "root": {
       "inputs": {
-        "nixpkgs": "nixpkgs",
-        "obk-src": "obk-src"
+        "ayugram-desktop": "ayugram-desktop",
+        "nixpkgs": "nixpkgs_2"
+      }
+    },
+    "tg_owt": {
+      "inputs": {
+        "nixpkgs": [
+          "ayugram-desktop",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1778847431,
+        "narHash": "sha256-D7N+DQLcUFYANMo+N/odsVEwc263fFMlnMek+LaLBdg=",
+        "owner": "ndfined-crp",
+        "repo": "tg_owt",
+        "rev": "1cc099e066c910e9cb3180777ce03f3d72cbfa27",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ndfined-crp",
+        "repo": "tg_owt",
+        "type": "github"
       }
     }
   },
